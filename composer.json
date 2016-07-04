@@ -34,10 +34,6 @@
       "Agere\\Service": "src/",
       "Agere\\ServiceManager": "src/",
       "Agere\\String": "src/"
-    },
-    "classmap": [
-      "./Debug.php",
-      "./Format.php"
-    ]
+    }
   }
 }
