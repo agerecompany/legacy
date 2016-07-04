@@ -1,0 +1,43 @@
+{
+  "name": "agerecompany/legacy",
+  "description": "Legacy code",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "legacy",
+    "agere"
+  ],
+  "authors": [
+    {
+      "name": "Sergiy Popov",
+      "email": "popow.sergiy@gmail.com",
+      "homepage": "http://agere.com.ua/",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload": {
+    "psr-0": {
+      "Agere\\ArrayEx": "src/",
+      "Agere\\ArrayUtils": "src/",
+      "Agere\\Base": "src/",
+      "Agere\\Controller": "src/",
+      "Agere\\Date": "src/",
+      "Agere\\Domain": "src/",
+      "Agere\\Generation": "src/",
+      "Agere\\Log": "src/",
+      "Agere\\Memcache": "src/",
+      "Agere\\Pagination": "src/",
+      "Agere\\Service": "src/",
+      "Agere\\ServiceManager": "src/",
+      "Agere\\String": "src/"
+    },
+    "classmap": [
+      "./Debug.php",
+      "./Format.php"
+    ]
+  }
+}
