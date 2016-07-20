@@ -80,10 +80,10 @@ abstract class AbstractCache implements ICacheStrategy {
 		$cacheKeyBackup = $cacheKey . '_backup';
 		$cacheKeyLock = $cacheKey . '_lock';
 		
-		if(!$this->isBackend()) {
-			$old = $this->getFromMap($cacheKey);
-			if($old) { return $old; }
-		}
+		//if(!$this->isBackend()) {
+		//	$old = $this->getFromMap($cacheKey);
+		//	if($old) { return $old; }
+		//}
 		
 		// time expire and other options
 		$options = $this->getCacheOptions();
@@ -91,8 +91,8 @@ abstract class AbstractCache implements ICacheStrategy {
 		$optionsBackup['expire'] = 86000;
 		$optionsLock['expire'] = 10;
 	
-		$data = $this->getFromMap($cacheKeyBackup);
-		$this->setToMap($cacheKey, $data, $options);
+		//$data = $this->getFromMap($cacheKeyBackup);
+		//$this->setToMap($cacheKey, $data, $options);
 		
 		//if(($options['expire'] === 0)
 		//	|| !($this->getCache() instanceof Memcache) // is fake memcache
@@ -107,7 +107,7 @@ abstract class AbstractCache implements ICacheStrategy {
 				$this->setToMap($cacheKey, $data, $options);
 				$this->setToMap($cacheKeyBackup, $data, $optionsBackup);
 			}
-			$this->getCache()->delete($cacheKeyLock);
+			//$this->getCache()->delete($cacheKeyLock);
 		//}
 		
 		return $data;
@@ -144,7 +144,7 @@ abstract class AbstractCache implements ICacheStrategy {
 		$tag = null;
 		extract($options); // magic
 		
-	    $this->getCache()->set($cacheKey, $data, $flag, $expire, $tag);
+	    //$this->getCache()->set($cacheKey, $data, $flag, $expire, $tag);
 	}	
 	
 	public function setCacheOptions($options) {

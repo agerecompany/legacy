@@ -200,7 +200,7 @@ class Helper {
 	 */
 	private function _initMemcache() {
 		$cachePrefix = Registry::getConfig()->get('global')->cache->prefix;
-		\Agere\MemcacheAirweb::setPrefix($cachePrefix);	
+		//\Agere\MemcacheAirweb::setPrefix($cachePrefix);	
 	}	
 
 } 

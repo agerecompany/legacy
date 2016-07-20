@@ -73,11 +73,11 @@ class Helper extends FactoryAbstract {
 		static $memcache = null;
 
 		if ($memcache === null) {
-			$memcache = static::getMaintenance('Agere\Memcache');
+			//$memcache = static::getMaintenance('Agere\Memcache');
 		}
 
 		//$memcacheEnabled = \Agere\Base\App\Registry::getConfig()->get('cache.memcache.status') ;
-		$memcacheEnabled = true;
+		$memcacheEnabled = false;
 		
 		if($memcacheEnabled) {
 			//return \Agere\Domain\ObjectWatcher\Cache\MemcacheObjectWatcher::getInstance();

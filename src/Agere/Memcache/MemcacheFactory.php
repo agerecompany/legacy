@@ -31,14 +31,15 @@ class MemcacheFactory {
 		*/
 
 		if (isset($options['enable']) && $options['enable']) {
-			try {
+			//try {
+			
 				if(class_exists('Memcache')) {
 					$host = isset($options['host']) ? $options['host'] : 'localhost';
 					$port = isset($options['port']) ? $options['port'] : 11211;
 
 					$cache = new \Memcache();
 					$cache->addServer($host, $port);
-
+					
 					// memcache doesn't have opportunity check whether memcache server available and generate notice if it is false
 					// @link http://stackoverflow.com/questions/1241728/can-i-try-catch-a-warning
 					if (false == $cache->connect($host, $port)) {
@@ -49,9 +50,9 @@ class MemcacheFactory {
 				} else {
 					throw new \Exception('OOps, Memcache extension is not installed on this server. You should make installation Memcache extension or take this in your host provider.');
 				}
-			} catch (\Exception $e) {
+			/*} catch (\Exception $e) {
 				die("WARNING: {$e->getMessage()}"); //@todo write to log
-			}
+			}*/
 		} else {
 			$instance = new MemcacheFake();
 		}

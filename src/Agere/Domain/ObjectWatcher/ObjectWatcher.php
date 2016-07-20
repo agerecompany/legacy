@@ -19,7 +19,7 @@ class ObjectWatcher implements IObjectWatcher {
 	 * @todo Create Memcache interface
 	 * @param Memcache $memcache
 	 */
-	public function __construct($memcache) {
+	public function __construct($memcache = null) {
 		//$this->cache = MemcacheAirweb::getInstance();
 		$this->cache = $memcache;
 		static::$instance = $this;
