@@ -36,7 +36,8 @@
       "Agere\\String": "src/"
     },
     "classmap": [
-      "src/Agere/Format.php"
+      "src/Agere/Format.php",
+      "src/Agere/Debug.php"
     ]
   }
 }
