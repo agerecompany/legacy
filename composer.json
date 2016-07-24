@@ -35,8 +35,8 @@
       "Agere\\ServiceManager": "src/",
       "Agere\\String": "src/"
     },
-    "psr-4": {
-      "Agere\\Format\\": "src/"
-    }
+    "classmap": [
+      "./Format.php"
+    ]
   }
 }
